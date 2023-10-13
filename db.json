@@ -1,0 +1,53 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "productId": "thapaserialnoi",
+      "rating": 4,
+      "userName": "Rahul"
+    },
+    {
+      "id": 2,
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "productId": "thapaserialnoi",
+      "rating": 5,
+      "userName": "Akshat"
+    },
+    {
+      "id": 3,
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "productId": "thapaserialnoi",
+      "rating": 5,
+      "userName": "Rajeev"
+    },
+    {
+      "id": "NqFE_akMtCwf0IMqJ1qy3",
+      "userName": "Janvi",
+      "rating": "3",
+      "review": "Average Product",
+      "productId": "thapaserialnoi"
+    },
+    {
+      "id": "PWOxkDZw8IHdw4oqhMzF9",
+      "userName": "Rahul",
+      "rating": "5",
+      "review": "Awesome product",
+      "productId": "thapaserialnog"
+    },
+    {
+      "id": "dZ4Dt_kVDTU1dLMcVhmHF",
+      "userName": "Akshat",
+      "rating": "2",
+      "review": "Bad Product",
+      "productId": "thapaserialnog"
+    },
+    {
+      "id": "CX08Jh2C__PFmejHAyS7z",
+      "userName": "Rahul",
+      "rating": "4",
+      "review": "Nice ",
+      "productId": "thapaserialnod"
+    }
+  ]
+}

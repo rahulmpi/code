@@ -1,0 +1,2 @@
+export const CLIENT_ID= import.meta.env.REACT_APP_CLIENT_ID || 'AZobM5ACxyMgmb4ya_loE17tvVoUanX7LML6OsVRx_Cc9HJV2Ls_qOYIGlGOCWCvzVS1Ymhpheguq8sb'
+export const SECRET_ID = import.meta.env.REACT_APP_APP_SECRET || 'EFL3S1OwuUVdVlbeqTdOfDef-ayAdu2satJx1YaHid3Y1HzQRmWGAc4OWnMeiFX2fLKWQrnzPDO-4kEf'
