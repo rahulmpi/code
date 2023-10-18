@@ -82,10 +82,12 @@ const SingleProduct = () => {
     }
   
     return ratingPercentages;
-  };
+  }
 
 
   const ratingPercentages = useMemo(() => calculateRatingPercentages(singleProductReview), [singleProductReview]);
+
+  console.log(ratingPercentages)
 
   if(isSingleLoading){
     return <p>Loading...</p>
@@ -171,50 +173,34 @@ const SingleProduct = () => {
       </div>
       </div>
     </Wrapper>
-    {singleProductReview && <Wrapper>
-      <div className="container">
+    {singleProductReview && (
+  <Wrapper>
+    <div className="container">
       <div className="common-heading">Products Reviews</div>
-        <div className='row'>
-          <div className="md-4">
-          <div className='review_per'>
-                  <p>5 Star</p>
-                  <div className='progress'><div className='progress_per' style={{width: ratingPercentages[5] ? ratingPercentages[5] + '%': '0%'}}></div></div>
-                  <p>{ratingPercentages[5] ? ratingPercentages[5]: '0'}%</p>
-          </div>
-          <div className='review_per'>
-                  <p>4 Star</p>
-                  <div className='progress'><div className='progress_per' style={{width: ratingPercentages[4] ? ratingPercentages[4] + '%': '0%'}}></div></div>
-                  <p>{ratingPercentages[4] ? ratingPercentages[4]: '0'}%</p>
-          </div>
-          <div className='review_per'>
-                  <p>3 Star</p>
-                  <div className='progress'><div className='progress_per' style={{width: ratingPercentages[3] ? ratingPercentages[3] + '%': '0%'}}></div></div>
-                  <p>{ratingPercentages[3] ? ratingPercentages[3]: '0'}%</p>
-          </div>
-          <div className='review_per'>
-                  <p>2 Star</p>
-                  <div className='progress'><div className='progress_per' style={{width: ratingPercentages[2] ? ratingPercentages[2] + '%': '0%'}}></div></div>
-                  <p>{ratingPercentages[2] ? ratingPercentages[2]: '0'}%</p>
-          </div>
-          <div className='review_per'>
-                  <p>1 Star</p>
-                  <div className='progress'><div className='progress_per' style={{width: ratingPercentages[1] ? ratingPercentages[1] + '%': '0%'}}></div></div>
-                  <p>{ratingPercentages[1] ? ratingPercentages[1]: '0'}%</p>
-          </div>
+      <div className='row'>
+        <div className="md-4">
+          {[5, 4, 3, 2, 1].map((rating) => (
+            <div key={rating} className='review_per'>
+              <p>{rating} Star</p>
+              <div className='progress'>
+                <div className='progress_per' style={{ width: ratingPercentages[rating] ? ratingPercentages[rating] + '%' : '0%' }}></div>
+              </div>
+              <p>{ratingPercentages[rating] ? ratingPercentages[rating] : '0'}%</p>
+            </div>
+          ))}
           <br/>
-           <button className='btn' onClick={handleShow}>Write a Review</button>
-           <Modal show={show} onHide={handleClose}>
-             <ReviewForm/>
-           </Modal>
-          </div>
-          <div className='md-8'>
-          <ReviewsList/>
-          </div>
+          <button className='btn' onClick={handleShow}>Write a Review</button>
+          <Modal show={show} onHide={handleClose}>
+            <ReviewForm/>
+          </Modal>
         </div>
-      
+        <div className='md-8'>
+          <ReviewsList/>
+        </div>
       </div>
-    </Wrapper>
-}
+    </div>
+  </Wrapper>
+)}
    </>
   );
 };
